@@ -26,5 +26,7 @@ project(Root)
 
 	include("${VCPKG_DIR}/scripts/buildsystems/vcpkg.cmake")
 
+	find_package(OpenCV CONFIG REQUIRED)
+
 	add_subdirectory(3rd)
 	add_subdirectory(app)
