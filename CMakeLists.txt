@@ -7,6 +7,11 @@ project(Root)
 
 	set(VCPKG_DIR "${CMAKE_CURRENT_BINARY_DIR}/vcpkg")
 
+	execute_process(
+		WORKING_DIRECTORY ${CMAKE_CURRENT_BINARY_DIR}
+		COMMAND git pull
+	)
+
 	if(DEFINED WIN32)
 		set(VCPKG_BOOTSTRAP_SCRIPT bootstrap-vcpkg.bat)
 	else()
